@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <title>My Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    
+    <!--navigation bar-->
+    
+    <nav class="topNav" id="mytopNav">
+    
+        <ul>
+        
+            <li><a href="home.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            
+            <a class="logo" href="home.html"><img src="icons/logo.svg"></a>
+            
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="cv" href="cv.html">CV</a></li>
+            
+        </ul>
+        
+        <div class="hamburger">
+            
+            <a href="#" onclick="mobileMenu()">
+            
+            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            
+            </a>
+            
+        </div>
+    
+    </nav>
+    
+    <div class="container">
+    
+    <!--slideshow-->
+    
+        <div class="slideshow-container">
+
+            <div class="cv-parent">
+
+                <div class="mySlides fade">
+
+                    <img src="images/resume/profilepic.png" style="width:100%">
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <img src="images/resume/pastamania.png" style="width:100%">
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <img src="images/resume/sunset.png" style="width:100%">
+
+                </div>    
+
+
+                <div class="mySlides fade">
+
+                    <img src="images/resume/kai.png" style="width:100%">
+
+                </div>    
+
+
+                <div class="mySlides fade">
+
+                    <img src="images/resume/intern.png" style="width:100%">
+
+                </div>    
+
+                <div class="mySlides fade">
+
+                    <img src="images/resume/class.png" style="width:100%">
+
+                </div>
+
+
+                <div class="mySlides fade">
+
+                    <img src="images/resume/gardens.png" style="width:100%">
+
+                </div>                
+
+
+                <div class="mySlides fade">
+
+                    <img src="images/resume/games.png" style="width:100%">
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <img src="images/resume/swim.png" style="width:100%">
+
+                </div>    
+
+                <br>
+
+                <div style="text-align:center">
+
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span>
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+
+                </div>
+
+                <!--this is for the typing effect-->
+
+                <div id="about">
+
+                </div>
+
+
+            </div>    
+
+        </div>     
+
+        <!--about me-->
+        
+        <div class="abtme">
+        
+            <div class="hobby">
+
+                <h1>Hobbies:</h1>
+
+                <br>
+
+                <p>I enjoy playing basketball, frisbee, drawing<br>and playing the piano.</p>
+
+
+            </div>
+            
+            <div class="workexp">
+            
+                <h1>My Work Experience:</h1>
+                
+                <br>
+                
+                <p>2016-2017: Waitress at Hoshino Coffee</p><br>
+                
+                <p>2018: Banquet Server</p><br>
+                
+                <p>Mid 2019: Waitress at Oriole Cafe</p><br>
+                
+                <p>Late 2019: Internship at A&V Best Trading</p>
+
+            </div>
+            
+            <div class="skillset">
+            
+                <h1>Skills Set:</h1>
+                
+                <br>
+                
+                <p>Coding: Advanced</p><br>
+                
+                <p>Adobe Illustrator: Intermediate</p><br>
+                
+                <p>Adobe Photoshop: Low-Intermediate</p>
+            
+            </div>
+            
+        </div>
+
+    </div>
+    
+        <!--footer-->
+
+        <footer>
+
+            <div class="icons">
+
+                <a href="#">
+
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+
+                </a>
+
+            </div>
+            
+           
+
+        <p>Designed by Selina, DZ1804V</p>
+
+    </footer>
+    
+</body>
+    
+
+<script src="javascript/jquery-3.4.1.min.js"></script>
+    
+<script src="javascript/jquery.fancybox.min.js"></script>   
+    
+    
+<script>
+    
+    //    hamburger menu
+    
+    function mobileMenu(){
+        
+        var a = document.getElementById("mytopNav");
+        
+        if( 
+        
+        a.className === "topNav"){
+            
+        a.className = "topNav responsive";
+            
+        }
+            
+            
+        
+        else{
+            
+        a.className = "topNav";
+            
+        }
+           
+        }    
+    
+    
+    
+//    javascript for typing animation
+    
+        var string = "Nice to meet you! My name is Selina and I'm a design student from ITE College Central. Here are a few things you should know about me.."; /* type your text here */
+        var array = string.split("");
+        var timer;
+
+        function frameLooper () {
+            if (array.length > 0) {
+                document.getElementById("about").innerHTML += array.shift();
+            } else {
+                clearTimeout(timer);
+                    }
+            loopTimer = setTimeout('frameLooper()',50); /* change 70 for speed */
+
+        }
+        frameLooper();
+    
+//    javascript for slideshow
+    
+    
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    
+    
+</script>
+    
+
+    
+</html>

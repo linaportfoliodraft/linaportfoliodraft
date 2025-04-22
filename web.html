@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+        <title>My Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+        <link rel="stylesheet" href="style.css">
+    
+</head>
+    
+<body>
+    
+    
+    <ul class="breadcrumb">
+        
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li>Web Design</li>
+        
+    </ul>
+    
+    <div class="webdesign">
+        
+        <h1>My Designs</h1>
+    
+    </div>
+    
+    
+    <div class="container">
+
+        <div class="webdesign-content">
+            
+            <div class="slideshow-container">
+
+                <div class="mySlides1">
+                    
+                    <div class="numbertext">1/6</div>
+                    <img src="images/webdesign/blue-main.png" style="width:100%">
+                    
+                </div>
+
+                <div class="mySlides1">
+                    <div class="numbertext">2/6</div>
+                    <img src="images/webdesign/blue-services.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides1">
+                    <div class="numbertext">3/6</div>
+                    <img src="images/webdesign/blue-shop.png" style="width:100%">
+                </div>
+
+                <div class="mySlides1">
+                    <div class="numbertext">4/6</div>
+                    <img src="images/webdesign/blue-about.png" style="width:100%">
+                </div>
+
+                <div class="mySlides1">
+                    <div class="numbertext">5/6</div>
+                    <img src="images/webdesign/blue-FAQ.png" style="width:100%">
+                </div>
+
+                <div class="mySlides1">
+                    <div class="numbertext">6/6</div>
+                    <img src="images/webdesign/blue-contact.png" style="width:100%">
+                </div>    
+
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                
+                <h1 class="webdesign-title">Animal Website Design</h1>
+
+            </div> 
+
+
+            <div class="slideshow-container">
+
+                <div class="mySlides2">
+                    <div class="numbertext">1/2</div>
+                    <img src="images/webdesign/alumni-home.png" style="width:100%">
+                </div>
+
+                <div class="mySlides2">
+                    
+                    <div class="numbertext">2/2</div>
+                    <img src="images/webdesign/alumni-about.png" style="width:100%">
+                </div>
+
+
+
+                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                
+                <h1 class="webdesign-title">ITE Alumni Website Design</h1>
+                
+                </div>
+
+                
+            
+            </div>
+    
+        </div>
+    
+    <footer>
+    
+        <div class="icons">
+
+            <a href="#">
+
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+
+            </a>
+
+            <a href="#">
+
+                <i class="fa fa-google-plus" aria-hidden="true"></i>
+
+            </a>
+
+        </div>
+
+        <p>Designed by Selina, DZ1804V</p>
+
+    </footer>
+    
+</body>
+ 
+    
+    <script src="javascript/jquery-3.4.1.min.js"></script>
+
+    <script src="javascript/jquery.fancybox.min.js"></script>
+
+    
+    
+    <script>
+        
+//        this is for the slideshow
+        var slideIndex = [1,1];
+        var slideId = ["mySlides1", "mySlides2"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+
+        function plusSlides(n, no) {
+          showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+          var i;
+          var x = document.getElementsByClassName(slideId[no]);
+          if (n > x.length) {slideIndex[no] = 1}    
+          if (n < 1) {slideIndex[no] = x.length}
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          x[slideIndex[no]-1].style.display = "block";  
+        }
+</script>
+    
+    
+</html>

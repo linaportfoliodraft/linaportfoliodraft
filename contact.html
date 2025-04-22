@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <title>My Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    
+    <nav class="topNav" id="mytopNav">
+    
+        <ul>
+        
+            <li><a href="home.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            
+            <a class="logo" href="home.html"><img src="icons/logo.svg"></a>
+            
+            <li><a class="contact" href="contact.html">Contact</a></li>
+            <li><a href="cv.html">CV</a></li>
+            
+        </ul>
+    
+        <div class="hamburger">
+            
+            <a href="#" onclick="mobileMenu()">
+            
+            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            
+            </a>
+            
+        </div>
+        
+    </nav>
+    
+ 
+        <div class="contactme">
+
+
+            <div class="contact-heading">
+                
+                <h1 class="stranger">Don't be a stranger.</h1>
+                
+                <h1>Just say hi!</h1>
+                
+                <p>Feel free to drop me a message! I am always open to new projects,<br> creative ideas or opportunities to be part of your visions. </p>
+            
+            
+            </div>
+
+            <div class="mycontact">
+                
+                <p class="business">For business enquiries:<br><br>
+
+                <a href="mailto:selinachong41@gmail.com"> selinachong41@gmail.com</a>
+
+                </p>
+                
+                <p class="chat"> Feel like chatting? Contact me at: <br><br> <a href="tel: +65 9836 2389">+65 9836 2389</a>
+
+                </p>
+                
+            </div>
+            
+            
+            <div class="form">
+            
+                
+                <div class="form-top">
+                
+                    <div class="user-info">
+
+                        <form>
+
+                            <input type="text" name="user-name" required placeholder="Your Name here">
+
+                            <br><br>
+
+                           
+                            <input type="email" name="user-email" required placeholder="Your Email here">
+
+
+                        </form>
+
+                    </div>
+
+                    <div class="comments">
+
+                        <input type="text" placeholder="Additional Comments...">
+
+                    </div>
+                    
+                </div>
+                
+                <div class="submit">
+                
+                    <input type="submit" value="Submit">
+                    
+                </div>
+                
+            </div>
+
+        </div>
+    
+    
+        <footer>
+    
+            <div class="icons">
+            
+                <a href="#">
+                
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                
+                </a>
+                
+                <a href="#">
+                
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                
+                </a>
+                
+                <a href="#">
+                
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                
+                </a>
+
+            
+            
+            </div>
+
+            <p>Designed by Selina, DZ1804V</p>
+
+    
+    
+        </footer>
+        
+
+
+</body>
+
+
+<script src="javascript/jquery-3.4.1.min.js"></script>
+    
+<script src="javascript/jquery.fancybox.min.js"></script> 
+    
+<script> 
+    
+//    hamburger menu
+    
+    function mobileMenu(){
+        
+        var a = document.getElementById("mytopNav");
+        
+        if( 
+        
+        a.className === "topNav"){
+            
+        a.className = "topNav responsive";
+            
+        }
+            
+            
+        
+        else{
+            
+        a.className = "topNav";
+            
+        }
+           
+        }    
+    
+</script>
+    
+</html>
